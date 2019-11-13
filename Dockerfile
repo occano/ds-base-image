@@ -16,6 +16,11 @@ RUN pip install --user Tempita pybind11
 
 RUN git clone https://github.com/scipy/scipy.git /usr/src/scipy && \
     cd /usr/src/scipy						&& \ 
-    python setup.py install
+    python setup.py install					&& \
+rm -rf /usr/src/scipy
+RUN apt install -y libblas-dev llvm libsndfile1-dev
+RUN pip install llvmlite
+RUN pip install Cython
+RUN pip install librosa
 
 CMD ["/bin/bash"]
