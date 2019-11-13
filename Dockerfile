@@ -10,7 +10,7 @@ RUN echo "[global]" >> /etc/pip.conf			&& \
 
 RUN apt-get install -y gcc gfortran libatlas-base-dev python-dev libopenblas-dev liblapack-dev 
 RUN apt-get install -y cython libhdf5-dev
-RUN pip3 install tensorflow
+RUN pip3 install tensorflow==1.13.1
 
 RUN pip install --user Tempita pybind11
 
