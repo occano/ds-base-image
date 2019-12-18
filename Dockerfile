@@ -23,6 +23,6 @@ RUN apt install -y libblas-dev llvm libsndfile1-dev
 RUN pip install llvmlite
 RUN pip install Cython
 RUN pip install librosa
-RUN pip install scikit-learn
+#RUN pip install scikit-learn
 
 CMD ["/bin/bash"]
